@@ -1,0 +1,10 @@
+current directory: /home/benjamin/Documentos/rails/Library/vendor/bundle/ruby/3.0.0/gems/mimemagic-0.3.10/ext/mimemagic
+/usr/share/rvm/rubies/ruby-3.0.0/bin/ruby -I/usr/share/rvm/rubies/ruby-3.0.0/lib/ruby/3.0.0 -rrubygems /home/benjamin/Documentos/rails/Library/vendor/bundle/ruby/3.0.0/gems/rake-12.3.3/exe/rake RUBYARCHDIR\=/home/benjamin/Documentos/rails/Library/vendor/bundle/ruby/3.0.0/extensions/x86_64-linux/3.0.0/mimemagic-0.3.10 RUBYLIBDIR\=/home/benjamin/Documentos/rails/Library/vendor/bundle/ruby/3.0.0/extensions/x86_64-linux/3.0.0/mimemagic-0.3.10
+rake aborted!
+ArgumentError: wrong number of arguments (given 2, expected 1)
+/home/benjamin/Documentos/rails/Library/vendor/bundle/ruby/3.0.0/gems/mimemagic-0.3.10/ext/mimemagic/Rakefile:43:in `block in <top (required)>'
+/home/benjamin/Documentos/rails/Library/vendor/bundle/ruby/3.0.0/gems/rake-12.3.3/exe/rake:27:in `<main>'
+Tasks: TOP => default
+(See full trace by running task with --trace)
+
+rake failed, exit code 1
