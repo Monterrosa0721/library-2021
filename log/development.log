@@ -37622,3 +37622,378 @@ Processing by Admins::SessionsController#new as HTML
 Completed 200 OK in 21ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 18747)
 
 
+Started GET "/" for 127.0.0.1 at 2021-09-19 17:30:00 -0600
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomePageController#index as HTML
+  Rendering home_page/index.html.erb within layouts/application
+  Rendered home_page/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 473)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 680ms (Views: 673.0ms | ActiveRecord: 0.0ms | Allocations: 1382199)
+
+
+Started GET "/students/sign_in" for 127.0.0.1 at 2021-09-19 17:30:04 -0600
+Processing by Students::SessionsController#new as HTML
+  Rendering students/sessions/new.html.erb within layouts/application
+  Rendered students/shared/_links.html.erb (Duration: 0.9ms | Allocations: 581)
+  Rendered students/sessions/new.html.erb within layouts/application (Duration: 15.7ms | Allocations: 7668)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 33.2ms | ActiveRecord: 1.1ms | Allocations: 28987)
+
+
+Started GET "/students/sign_in" for 127.0.0.1 at 2021-09-19 17:30:10 -0600
+Processing by Students::SessionsController#new as HTML
+  Rendering students/sessions/new.html.erb within layouts/application
+  Rendered students/shared/_links.html.erb (Duration: 0.9ms | Allocations: 131)
+  Rendered students/sessions/new.html.erb within layouts/application (Duration: 9.4ms | Allocations: 1026)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 41.0ms | ActiveRecord: 0.0ms | Allocations: 10770)
+
+
+Started GET "/students/password/new" for 127.0.0.1 at 2021-09-19 17:30:12 -0600
+Processing by Devise::PasswordsController#new as HTML
+  Rendering students/passwords/new.html.erb within layouts/application
+  Rendered vendor/bundle/ruby/2.7.0/gems/devise-4.8.0/app/views/devise/shared/_error_messages.html.erb (Duration: 1.7ms | Allocations: 197)
+  Rendered students/shared/_links.html.erb (Duration: 1.4ms | Allocations: 160)
+  Rendered students/passwords/new.html.erb within layouts/application (Duration: 12.3ms | Allocations: 1381)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 39.3ms | ActiveRecord: 0.0ms | Allocations: 11647)
+
+
+Started GET "/students/sign_up" for 127.0.0.1 at 2021-09-19 17:30:15 -0600
+Processing by Students::RegistrationsController#new as HTML
+  Rendering students/registrations/new.html.erb within layouts/application
+  Rendered vendor/bundle/ruby/2.7.0/gems/devise-4.8.0/app/views/devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered students/registrations/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 2499)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.0ms | Allocations: 13177)
+
+
+Started POST "/students" for 127.0.0.1 at 2021-09-19 17:30:34 -0600
+Processing by Students::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"QKJNXgzmnySw89WCCirJ+IBghPqPXC9hiHnp3s1uOSuvZkPDPZPyB3RVxvJQ6Y9JafvaR9K4UHd+MqSEn0Ls8Q==", "student"=>{"email"=>"student@ncsu.edu", "name"=>"student", "password"=>"[FILTERED]", "education_level"=>"B.S", "university"=>"Duke", "max_book_allowed"=>"5"}, "commit"=>"Create Student"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "student@ncsu.edu"], ["LIMIT", 1]]
+  [1m[36mCACHE Student Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "student@ncsu.edu"], ["LIMIT", 1]]
+  [1m[36mStudent Create (0.3ms)[0m  [1m[32mINSERT INTO "students" ("email", "name", "education_level", "university", "max_book_allowed", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "student@ncsu.edu"], ["name", "student"], ["education_level", "B.S"], ["university", "Duke"], ["max_book_allowed", 5], ["created_at", "2021-09-19 23:30:34.918805"], ["updated_at", "2021-09-19 23:30:34.918805"], ["encrypted_password", "$2a$11$va8ygVsRqoAGqBQiq4nZmug6W0ZnasiNSMmzh7ZdtJmQYnpvdvDcy"]]
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/students
+Completed 302 Found in 137ms (ActiveRecord: 6.8ms | Allocations: 12960)
+
+
+Started GET "/students" for 127.0.0.1 at 2021-09-19 17:30:34 -0600
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1360)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.2ms | Allocations: 11672)
+
+
+Started GET "/books_students" for 127.0.0.1 at 2021-09-19 17:30:41 -0600
+Processing by BooksController#books_students as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:22:in `books_students'
+  Rendering books/books_students.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."library_id" IN (SELECT "libraries"."id" FROM "libraries" WHERE "libraries"."university" IN (SELECT "students"."university" FROM "students" WHERE "students"."email" = ?))[0m  [["email", "student@ncsu.edu"]]
+  ↳ app/views/books/books_students.html.erb:38
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/books_students.html.erb:98
+  [1m[36mLibrary Load (0.2ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mLibrary Load (0.1ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mLibrary Load (0.1ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  Rendered books/books_students.html.erb within layouts/application (Duration: 37.6ms | Allocations: 20186)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 114ms (Views: 48.1ms | ActiveRecord: 3.1ms | Allocations: 37219)
+
+
+Started GET "/students" for 127.0.0.1 at 2021-09-19 17:31:05 -0600
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1036)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 30.8ms | ActiveRecord: 0.5ms | Allocations: 10590)
+
+
+Started GET "/student_libraries_index" for 127.0.0.1 at 2021-09-19 17:31:07 -0600
+Processing by LibrariesController#student_libraries_index as HTML
+  Rendering libraries/student_libraries_index.erb within layouts/application
+  [1m[36mLibrary Load (0.1ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries"[0m
+  ↳ app/views/libraries/student_libraries_index.erb:16
+  Rendered libraries/student_libraries_index.erb within layouts/application (Duration: 1.5ms | Allocations: 884)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.2ms | Allocations: 11938)
+
+
+Started GET "/students" for 127.0.0.1 at 2021-09-19 17:31:10 -0600
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (Duration: 10.4ms | Allocations: 1028)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 41.1ms | ActiveRecord: 0.5ms | Allocations: 10583)
+
+
+Started GET "/getBookmarkBooks" for 127.0.0.1 at 2021-09-19 17:31:12 -0600
+Processing by BooksController#getBookmarkBooks as HTML
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:372:in `getBookmarkBooks'
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" IN (SELECT "hold_requests"."book_id" FROM "hold_requests" WHERE "hold_requests"."student_id" = ?)[0m  [["student_id", 16]]
+  ↳ app/controllers/books_controller.rb:376:in `getBookmarkBooks'
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" IN (SELECT "special_books"."book_id" FROM "special_books" WHERE "special_books"."student_id" = ?)[0m  [["student_id", 16]]
+  ↳ app/controllers/books_controller.rb:376:in `getBookmarkBooks'
+  Rendering books/getBookmarkBooks.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" IN (SELECT "checkouts"."book_id" FROM "checkouts" WHERE "checkouts"."return_date" IS NULL AND "checkouts"."student_id" = ?)[0m  [["student_id", 16]]
+  ↳ app/views/books/getBookmarkBooks.html.erb:21
+  [1m[36mBook Load (10.9ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" IN (SELECT "bookmarks"."book_id" FROM "bookmarks" WHERE "bookmarks"."student_id" = ?)[0m  [["student_id", 16]]
+  ↳ app/views/books/getBookmarkBooks.html.erb:68
+  Rendered books/getBookmarkBooks.html.erb within layouts/application (Duration: 15.8ms | Allocations: 2158)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 96ms (Views: 17.3ms | ActiveRecord: 18.4ms | Allocations: 17885)
+
+
+Started GET "/students" for 127.0.0.1 at 2021-09-19 17:31:17 -0600
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1036)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.2ms | Allocations: 10642)
+
+
+Started GET "/students/16/edit" for 127.0.0.1 at 2021-09-19 17:31:19 -0600
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:116:in `set_student'
+  Rendering students/edit.html.erb within layouts/application
+  Rendered students/_new_form.html.erb (Duration: 4.7ms | Allocations: 1289)
+  Rendered students/edit.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1780)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 32ms (Views: 25.0ms | ActiveRecord: 0.6ms | Allocations: 12943)
+
+
+Started GET "/students" for 127.0.0.1 at 2021-09-19 17:31:22 -0600
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (Duration: 11.5ms | Allocations: 1024)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 63.2ms | ActiveRecord: 0.5ms | Allocations: 10606)
+
+
+Started GET "/students" for 127.0.0.1 at 2021-09-19 17:31:23 -0600
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1017)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.4ms | Allocations: 10573)
+
+
+Started GET "/students" for 127.0.0.1 at 2021-09-19 17:31:25 -0600
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1017)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.2ms | Allocations: 10575)
+
+
+Started DELETE "/students/sign_out" for 127.0.0.1 at 2021-09-19 17:31:27 -0600
+Processing by Students::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"w229b6Ua1gfuTUZGAlCE767iSxpaQnS0fnC4egvjXUg63c2YCr9WzlsOUbIDNAXXuxxLQ0ZxqxD4B1JDTR9ydw=="}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 0.2ms | Allocations: 2750)
+
+
+Started GET "/" for 127.0.0.1 at 2021-09-19 17:31:27 -0600
+Processing by HomePageController#index as HTML
+  Rendering home_page/index.html.erb within layouts/application
+  Rendered home_page/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 84)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 9658)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2021-09-19 17:31:29 -0600
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (Duration: 1.0ms | Allocations: 576)
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2041)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 18.6ms | ActiveRecord: 1.4ms | Allocations: 17745)
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at 2021-09-19 17:31:35 -0600
+Processing by Admins::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"qRRreXTfuWzVVhiI+TG5FJES/F8EbdyhhOhL43PdwhqcONCzIyGGPUyskvc3YH9zjW3eRNCO9PrMmqhxyJBQfw==", "admin"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 119ms (ActiveRecord: 0.2ms | Allocations: 2199)
+
+
+Processing by Admins::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"qRRreXTfuWzVVhiI+TG5FJES/F8EbdyhhOhL43PdwhqcONCzIyGGPUyskvc3YH9zjW3eRNCO9PrMmqhxyJBQfw==", "admin"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1033)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 125ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 10668)
+
+
+Started GET "/admins/registrations" for 127.0.0.1 at 2021-09-19 19:10:30 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"registrations"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/admins_controller.rb:85:in `set_admin'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms | Allocations: 1271)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Admin with 'id'=registrations):
+  
+app/controllers/admins_controller.rb:85:in `set_admin'
+Started GET "/admins/" for 127.0.0.1 at 2021-09-19 19:32:27 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AdminsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 284)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2021-09-19 19:32:27 -0600
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (Duration: 0.2ms | Allocations: 133)
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1026)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 10830)
+
+
+Started GET "/admins/new" for 127.0.0.1 at 2021-09-19 19:32:38 -0600
+Processing by AdminsController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 286)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2021-09-19 19:32:38 -0600
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1021)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.0ms | Allocations: 10782)
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at 2021-09-19 19:32:46 -0600
+Processing by Admins::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"tvpeIzCcWuPFwA/WYppBRnuRrGitrVZOBpDscVVZrKGcnGgc03RPmEBF6HcQmylVQZTNFZYc66VjvwljfUM/3Q==", "admin"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 116ms (ActiveRecord: 0.3ms | Allocations: 1950)
+
+
+Processing by Admins::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"tvpeIzCcWuPFwA/WYppBRnuRrGitrVZOBpDscVVZrKGcnGgc03RPmEBF6HcQmylVQZTNFZYc66VjvwljfUM/3Q==", "admin"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1026)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 123ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 10626)
+
+
+Started GET "/admins/password/new" for 127.0.0.1 at 2021-09-19 19:32:54 -0600
+Processing by Devise::PasswordsController#new as HTML
+  Rendering admins/passwords/new.html.erb within layouts/application
+  Rendered vendor/bundle/ruby/2.7.0/gems/devise-4.8.0/app/views/devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered admins/shared/_links.html.erb (Duration: 0.4ms | Allocations: 158)
+  Rendered admins/passwords/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 964)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.0ms | Allocations: 10668)
+
+
+Started POST "/admins/password" for 127.0.0.1 at 2021-09-19 19:32:59 -0600
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"authenticity_token"=>"KI1NdsLN1Z1xVX4aDcquk8bNW9CzTD9niWojFqpYKYLUuGzjvj/+i+/QHV3EEC7/NuUWKu2XZWbWeyPFczj+HQ==", "admin"=>{"email"=>""}, "commit"=>"Send me reset password instructions"}
+  Rendering admins/passwords/new.html.erb within layouts/application
+  Rendered vendor/bundle/ruby/2.7.0/gems/devise-4.8.0/app/views/devise/shared/_error_messages.html.erb (Duration: 1.7ms | Allocations: 218)
+  Rendered admins/shared/_links.html.erb (Duration: 0.2ms | Allocations: 128)
+  Rendered admins/passwords/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 891)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 12163)
+
+
+Started POST "/admins/password" for 127.0.0.1 at 2021-09-19 19:33:02 -0600
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"authenticity_token"=>"Pr480baLu0j2iI/cgb2OKLKdXVsDYgbv0qiPg8MxL64U2AruVWOuM3MNaH3zvOY7iJg8JjjTuwS3h2qR6yu80g==", "admin"=>{"email"=>"admin@admin.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."reset_password_token" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["reset_password_token", "4000a24a0643909f0dd388d2321e31ed3a29b53fa9a08b28fac733b863146b49"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Update (0.2ms)[0m  [1m[33mUPDATE "admins" SET "reset_password_token" = ?, "reset_password_sent_at" = ?, "updated_at" = ? WHERE "admins"."id" = ?[0m  [["reset_password_token", "4000a24a0643909f0dd388d2321e31ed3a29b53fa9a08b28fac733b863146b49"], ["reset_password_sent_at", "2021-09-20 01:33:02.713049"], ["updated_at", "2021-09-20 01:33:02.713226"], ["id", 4]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering admins/mailer/reset_password_instructions.html.erb
+  Rendered admins/mailer/reset_password_instructions.html.erb (Duration: 0.9ms | Allocations: 1195)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 3.4ms
+Completed 500 Internal Server Error in 160ms (ActiveRecord: 6.7ms | Allocations: 35019)
+
+
+  
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+    2: 
+    3: <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+    4: 
+    5: <p><%= link_to 'Change my password', edit_password_url(@resource, reset_password_token: @token) %></p>
+    6: 
+    7: <p>If you didn't request this, please ignore this email.</p>
+    8: <p>Your password won't change until you access the link above and create a new one.</p>
+  
+app/views/admins/mailer/reset_password_instructions.html.erb:5
+Started POST "/admins/password" for 127.0.0.1 at 2021-09-19 19:33:19 -0600
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"authenticity_token"=>"KI1NdsLN1Z1xVX4aDcquk8bNW9CzTD9niWojFqpYKYLUuGzjvj/+i+/QHV3EEC7/NuUWKu2XZWbWeyPFczj+HQ==", "admin"=>{"email"=>"admin@admin.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."reset_password_token" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["reset_password_token", "1ec5be7aca1f302e04cf811362405a9e9b303b8e6e3349ed48af0b961dfe694d"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Update (0.4ms)[0m  [1m[33mUPDATE "admins" SET "reset_password_token" = ?, "reset_password_sent_at" = ?, "updated_at" = ? WHERE "admins"."id" = ?[0m  [["reset_password_token", "1ec5be7aca1f302e04cf811362405a9e9b303b8e6e3349ed48af0b961dfe694d"], ["reset_password_sent_at", "2021-09-20 01:33:19.888669"], ["updated_at", "2021-09-20 01:33:19.889533"], ["id", 4]]
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  Rendering admins/mailer/reset_password_instructions.html.erb
+  Rendered admins/mailer/reset_password_instructions.html.erb (Duration: 0.7ms | Allocations: 1033)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 2.1ms
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 8.1ms | Allocations: 9905)
+
+
+  
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+    2: 
+    3: <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+    4: 
+    5: <p><%= link_to 'Change my password', edit_password_url(@resource, reset_password_token: @token) %></p>
+    6: 
+    7: <p>If you didn't request this, please ignore this email.</p>
+    8: <p>Your password won't change until you access the link above and create a new one.</p>
+  
+app/views/admins/mailer/reset_password_instructions.html.erb:5
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
