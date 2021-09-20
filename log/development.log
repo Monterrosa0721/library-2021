@@ -38079,3 +38079,212 @@ Processing by HomePageController#index as HTML
 Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 10975)
 
 
+Started GET "/admins/sign_in" for 127.0.0.1 at 2021-09-19 20:06:20 -0600
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (Duration: 0.9ms | Allocations: 585)
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 9.2ms | Allocations: 4776)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 22.1ms | ActiveRecord: 1.4ms | Allocations: 21963)
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at 2021-09-19 20:06:30 -0600
+Processing by Admins::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"+te7W/2b+uo6J7nxiXATKLhkLjfQ/ea0XNS2pje7gZnP+wCRqmXFu6PdM45HIdVPpBsMLAQezu8UplU0jPYT/A==", "admin"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.2ms | Allocations: 2398)
+
+
+Processing by Admins::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"+te7W/2b+uo6J7nxiXATKLhkLjfQ/ea0XNS2pje7gZnP+wCRqmXFu6PdM45HIdVPpBsMLAQezu8UplU0jPYT/A==", "admin"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (Duration: 0.3ms | Allocations: 131)
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1034)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 130ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 11196)
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at 2021-09-19 20:07:01 -0600
+Processing by Admins::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"QSTtLTYk3yJ0oCTfI4Aq8OmFqypWXnhDPbrpm/uIMtlrQtsS1czKWfElw35RgULj04DKV23vxahYlQyJ05KhpQ==", "admin"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.1ms | Allocations: 1851)
+
+
+Processing by Admins::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"QSTtLTYk3yJ0oCTfI4Aq8OmFqypWXnhDPbrpm/uIMtlrQtsS1czKWfElw35RgULj04DKV23vxahYlQyJ05KhpQ==", "admin"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1027)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 128ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 10650)
+
+
+Started GET "/students/sign_in" for 127.0.0.1 at 2021-09-19 20:10:04 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Students::SessionsController#new as HTML
+  Rendering students/sessions/new.html.erb within layouts/application
+  Rendered students/shared/_links.html.erb (Duration: 1.1ms | Allocations: 585)
+  Rendered students/sessions/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 4910)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 758ms (Views: 737.4ms | ActiveRecord: 0.7ms | Allocations: 1395548)
+
+
+Started POST "/students/sign_in" for 127.0.0.1 at 2021-09-19 20:10:16 -0600
+Processing by Students::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"RreR4l8NSSU4xlx2WWvRnNoe9C0xoaNuDmbYMZImoKRs0afdvOVcXr1Du9crarmP4BuVUAoQHoVrST0jujwz2A==", "student"=>{"email"=>"student@ncsu.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["email", "student@ncsu.edu"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/students
+Completed 302 Found in 123ms (ActiveRecord: 0.3ms | Allocations: 5490)
+
+
+Started GET "/students" for 127.0.0.1 at 2021-09-19 20:10:16 -0600
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1304)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.2ms | Allocations: 11582)
+
+
+Started DELETE "/students/sign_out" for 127.0.0.1 at 2021-09-19 20:13:21 -0600
+Processing by Students::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"i5K+g5jAC/r/kTFe8kBajQ0c+6+/tGfPJDpux5z2+hvyQcPQZmam8BY0RnlxzI6YrZXJUmtJFwVCY7Ot6ONJ9g=="}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 57ms (ActiveRecord: 0.3ms | Allocations: 9297)
+
+
+Started GET "/" for 127.0.0.1 at 2021-09-19 20:13:21 -0600
+Processing by HomePageController#index as HTML
+  Rendering home_page/index.html.erb within layouts/application
+  Rendered home_page/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 228)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.0ms | Allocations: 10488)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2021-09-19 20:13:23 -0600
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (Duration: 0.9ms | Allocations: 576)
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2042)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 37.5ms | ActiveRecord: 1.9ms | Allocations: 18024)
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at 2021-09-19 20:13:35 -0600
+Processing by Admins::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"jfBZIMjT1TzjPTpLnJtN7Vyw2XMF7nnWTjh/6IF+jgzXPUYfT+2Pcdt3fq8pLtYKaNpV7yQFDy/rgsTIOCflug==", "admin"=>{"email"=>"dmin@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "dmin@test.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.2ms | Allocations: 1967)
+
+
+Processing by Admins::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"jfBZIMjT1TzjPTpLnJtN7Vyw2XMF7nnWTjh/6IF+jgzXPUYfT+2Pcdt3fq8pLtYKaNpV7yQFDy/rgsTIOCflug==", "admin"=>{"email"=>"dmin@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1034)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 127ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 10711)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+  [1m[36mAdmin Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/admins/new" for 127.0.0.1 at 2021-09-19 20:15:57 -0600
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdminsController#new as HTML
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms | Allocations: 1199)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2021-09-19 20:15:57 -0600
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (Duration: 1.1ms | Allocations: 589)
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2830)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 715ms (Views: 704.7ms | ActiveRecord: 0.9ms | Allocations: 1389521)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/admins/sign_in" for 127.0.0.1 at 2021-09-19 20:18:03 -0600
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (Duration: 0.7ms | Allocations: 131)
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1029)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.0ms | Allocations: 10771)
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at 2021-09-19 20:18:18 -0600
+Processing by Admins::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"7iQ6xv/oyYOR5ZcuYyxtHvMJOaHktL3WYSAEN5eU7kCctG7c5hd2Oe/lZLsXZqu6OmXd4ptCmzoQye4UaQanKQ==", "admin"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.2ms | Allocations: 2387)
+
+
+Processing by Admins::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"7iQ6xv/oyYOR5ZcuYyxtHvMJOaHktL3WYSAEN5eU7kCctG7c5hd2Oe/lZLsXZqu6OmXd4ptCmzoQye4UaQanKQ==", "admin"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1030)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 128ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 11147)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2021-09-19 20:22:15 -0600
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1021)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 10739)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+  [1m[36mAdmin Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/admins/sign_in" for 127.0.0.1 at 2021-09-19 20:22:27 -0600
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1022)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 10752)
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at 2021-09-19 20:22:34 -0600
+Processing by Admins::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"DCX/tgTpmrq5eWLxsS2cYRKgBYwCHPxkZjxLby7XezB+tausHRYlAMd5kWTFZ1rF28zhz33q2ogX1aFM0EUyWQ==", "admin"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.2ms | Allocations: 1831)
+
+
+Processing by Admins::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"DCX/tgTpmrq5eWLxsS2cYRKgBYwCHPxkZjxLby7XezB+tausHRYlAMd5kWTFZ1rF28zhz33q2ogX1aFM0EUyWQ==", "admin"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1026)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 131ms (Views: 15.0ms | ActiveRecord: 0.0ms | Allocations: 10641)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLibraries (20200918003221)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "libraries" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "university" varchar, "location" varchar, "borrow_limit" integer, "overdue_fines" float, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
